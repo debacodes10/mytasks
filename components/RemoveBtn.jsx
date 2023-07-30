@@ -4,7 +4,7 @@ import { AiFillDelete } from 'react-icons/ai';
 const deleteTask = async (taskId) => {
   try {
     console.log(taskId)
-    const response = await fetch(`http://localhost:3000/api/tasks/all?id=${taskId}`, {
+    const response = await fetch(`https://mytasks-jet.vercel.app/api/tasks/all?id=${taskId}`, {
       method: 'DELETE',
     });
 

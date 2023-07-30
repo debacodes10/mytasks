@@ -5,7 +5,7 @@ import RemoveBtn from './RemoveBtn';
 
 const getTasks = async () => {
   try {
-    const task = await fetch('http://localhost:3000/api/tasks/all', { cache: 'no-store' });
+    const task = await fetch('https://mytasks-jet.vercel.app/api/tasks/all', { cache: 'no-store' });
     const data = await task.json();
     return data;
   } catch (error) {

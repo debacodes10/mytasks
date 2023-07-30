@@ -20,7 +20,7 @@ const TaskForm = () => {
       };
 
       // Send a POST request to the API endpoint (new.js) with the taskData
-      const response = await fetch('http://localhost:3000/api/tasks/new', {
+      const response = await fetch('https://mytasks-jet.vercel.app/api/tasks/new', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
