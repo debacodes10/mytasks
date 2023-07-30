@@ -4,7 +4,7 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 255, 255, 255;
 }
 
@@ -18,10 +18,259 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+/* custom classes */
+.button_signin {
+  display: inline-flex;
+  height: 40px;
+  width: 120px;
+  padding: 2px;
+  background-color: #4d4a4a; /* Dark grayish background color */
+  color: #ffffff; /* White text color */
+  border: none;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  align-items: center; 
+  justify-content: center; 
+}
+
+.button_signin:hover {
+  background-color: #000000; /* Black background color on hover */
+}
+
+
+.website_name {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333333; /* Adjust the color to your preference */
+  text-align: center; /* Center the text if needed */
+  text-transform: uppercase; /* Convert text to uppercase */
+  letter-spacing: 2px; /* Add spacing between letters */
+  margin-bottom: 20px; /* Add some space below the h1 tag */
+  /* Add other styles as per your design */
+}
+
+.index_desc {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #333333;
+  text-align: center;
+  margin-top: 10px;
+  /* Add other styles as per your design */
+}
+
+.index_desc strong {
+  font-weight: bold;
+  color: #2b2b2b;
+}
+
+.redirect_button {
+  padding: 10px 20px;
+  background-color: #3f99fa;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.redirect_button:hover {
+  background-color: #0056b3;
+}
+
+.redirect_button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #007bff;
+}
+
+.index_btn_task {
+  background-color:#f3f70b;
+  padding: 5px 5px;
+  border: #f78d04;
+  border-width: 5px;
+  border-style: double;
+  border-radius: 15px;
+  color: #3d2121
+}
+
+.heading_tasks{
+  display: flex;
+  background-color: #102a46;
+  color: #ffffff;
+  padding: 12px;
+  border: #65b1cf;
+  border-radius: 12px;
+  border-style: double;
+  border-width: 8px;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  max-width: 600px;
+}
+
+.task_bar{
+  background: linear-gradient(135deg, #37d483, #e3e658);
+  border: #692d3f;
+  border-radius: 15px;
+  border-width: 4px;
+  border-style: ridge;
+}
+
+.task_heading {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.task_description {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.task_list_container {
+  display: grid;
+  gap: 1rem; /* Adjust the gap size as needed */
+  align-items: center;
+}
+
+.create_task_heading {
+  display: inline-block;
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(135deg, #007bff, #00bfff);
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.create_task_heading_container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Assuming you have a class or ID for the task title input field */
+.task_title_input {
+  /* Set the font size, color, and family */
+  font-size: 18px;
+  color: #333;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  /* Add padding to create some spacing around the text */
+  padding: 12px 16px;
+
+  /* Set the background color of the input field */
+  background-color: #f7f7f7;
+
+  /* Add rounded corners to the input field */
+  border-radius: 6px;
+
+  /* Add a subtle box-shadow for a more polished look */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  /* Add a border to the input field with a nice border color */
+  border: 1px solid #ccc;
+
+  /* Set the width of the input field, adjust as needed */
+  width: 100%;
+
+  /* Add a transition for smooth hover effect */
+  transition: border-color 0.3s ease-in-out;
+}
+
+/* Add a hover effect to the input field */
+.task_title_input:hover {
+  border-color: #66a2fe;
+}
+
+/* Add focus styles to the input field when it's active */
+.task_title_input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.task_description_input {
+  /* Set the font size, color, and family */
+  font-size: 16px;
+  color: #333;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  /* Add padding to create some spacing around the text */
+  padding: 12px 16px;
+
+  /* Set the background color of the input field */
+  background-color: #f7f7f7;
+
+  /* Add rounded corners to the input field */
+  border-radius: 6px;
+
+  /* Add a subtle box-shadow for a more polished look */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  /* Add a border to the input field with a nice border color */
+  border: 1px solid #ccc;
+
+  /* Set the width of the input field, adjust as needed */
+  width: 100%;
+
+
+  /* Add a transition for smooth hover effect */
+  transition: border-color 0.3s ease-in-out;
+}
+
+/* Add a hover effect to the input field */
+.task_description_input:hover {
+  border-color: #66a2fe;
+}
+
+/* Add focus styles to the input field when it's active */
+.task_description_input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Assuming you have a class or ID for the "Create Task" button */
+.create_task_button {
+  /* Set the font size, color, and family */
+  font-size: 16px;
+  color: #fff;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  /* Set the background color of the button */
+  background-color: #3498db;
+
+  /* Add rounded corners to the button */
+  border-radius: 6px;
+
+  /* Add padding to create some spacing around the text */
+  padding: 12px 20px;
+
+  /* Add a subtle box-shadow for a more polished look */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  /* Remove default button styles */
+  border: none;
+  outline: none;
+
+  /* Add a transition for smooth hover effect */
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Add a hover effect to the button */
+.create_task_button:hover {
+  background-color: #258cd1;
+  cursor: pointer;
 }
